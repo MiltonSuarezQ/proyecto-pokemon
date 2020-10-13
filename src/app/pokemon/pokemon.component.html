@@ -1,102 +1,16 @@
 <div class="container-fluid contenido">
-    <div class="row col-sm-12">
-      <div class="col-sm-4">
-        <div class="card h-100">
-          <div class="card-header f-b">
-            Bulbasur
-          </div>
-          <div class="row card-body col-sm-12">
-            <div class="col-sm-6">
-              <p class="card-text f-9">Este Pokémon lleva un bulbo en el lomo y, para poder con su peso, tiene unas patas y un tronco gruesos y fuertes.</p>
-              <a class="btn btn-info" routerLink="pokemon" role="button">Ver Pokémon</a>
-            </div>
-            <div class="col-sm-6 text-center">
-              <img src="../assets/images/bulbasur.png" width="100%" alt="Bulbasur">
-            </div>
+  <div class="row col-sm-12">
+    <div class="col-sm-4 mb-4" *ngFor="let pokemon of pokemones; index as i">
+      <div class="card h-100">
+        <div class="card-header f-b">
+          {{pokemon.name}}
+        </div>
+        <div class="row card-body col-sm-12">
+          <div class="col-sm-12">
+            <a class="btn btn-info" routerLink="pokemon/{{i+1}}" role="button">Ver Pokémon</a>
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
-        <div class="card h-100">
-          <div class="card-header f-b">
-            Ivisaur
-          </div>
-          <div class="row card-body col-sm-12">
-            <div class="col-sm-6">
-              <p class="card-text f-9">Este Pokémon lleva un bulbo en el lomo y, para poder con su peso, tiene unas patas y un tronco gruesos y fuertes.</p>
-              <a class="btn btn-info" routerLink="pokemon" role="button">Ver Pokémon</a>
-            </div>
-            <div class="col-sm-6 text-center">
-              <img src="../assets/images/ivisaur.png" width="100%" alt="Ivisaur">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="card h-100">
-          <div class="card-header f-b">
-            Venasur
-          </div>
-          <div class="row card-body col-sm-12">
-            <div class="col-sm-6">
-              <p class="card-text f-9">Este Pokémon lleva un bulbo en el lomo y, para poder con su peso, tiene unas patas y un tronco gruesos y fuertes.</p>
-              <a class="btn btn-info" routerLink="pokemon" role="button">Ver Pokémon</a>
-            </div>
-            <div class="col-sm-6 text-center">
-              <img src="../assets/images/venasaur.png" width="100%" alt="Venasur">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row col-sm-12 mt-4 pb-5">
-      <div class="col-sm-4">
-        <div class="card h-100">
-          <div class="card-header f-b">
-            Bulbasur
-          </div>
-          <div class="row card-body col-sm-12">
-            <div class="col-sm-6">
-              <p class="card-text f-9">Este Pokémon lleva un bulbo en el lomo y, para poder con su peso, tiene unas patas y un tronco gruesos y fuertes.</p>
-              <a class="btn btn-info" routerLink="pokemon" role="button">Ver Pokémon</a>
-            </div>
-            <div class="col-sm-6 text-center">
-              <img src="../assets/images/bulbasur.png" width="100%" alt="Bulbasur">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="card h-100">
-          <div class="card-header f-b">
-            Ivisaur
-          </div>
-          <div class="row card-body col-sm-12">
-            <div class="col-sm-6">
-              <p class="card-text f-9">Este Pokémon lleva un bulbo en el lomo y, para poder con su peso, tiene unas patas y un tronco gruesos y fuertes.</p>
-              <a class="btn btn-info" routerLink="pokemon" role="button">Ver Pokémon</a>
-            </div>
-            <div class="col-sm-6 text-center">
-              <img src="../assets/images/ivisaur.png" width="100%" alt="Ivisaur">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="card h-100">
-          <div class="card-header f-b">
-            Venasur
-          </div>
-          <div class="row card-body col-sm-12">
-            <div class="col-sm-6">
-              <p class="card-text f-9">Este Pokémon lleva un bulbo en el lomo y, para poder con su peso, tiene unas patas y un tronco gruesos y fuertes.</p>
-              <a class="btn btn-info" routerLink="pokemon" role="button">Ver Pokémon</a>
-            </div>
-            <div class="col-sm-6 text-center">
-              <img src="../assets/images/venasaur.png" width="100%" alt="Venasur">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </div>      
   </div>
+</div>
