@@ -1,19 +1,18 @@
 <div class="container-fluid contenido">
     <div class="t-w col-sm-6 offset-sm-3 text-center">
-        <h1 class="t-w im-c">Bulbasur</h1>
+        <h1 class="t-w im-c text-capitalize"> {{pokemonDetail.name}}</h1>
     </div>    
     <div class="row col-sm-12 text-center">        
-        <img class="im-c" src="../../assets/images/bulbasur.png" width="30%" alt="">
+        <img class="im-c" src="https://pokeres.bastionbot.org/images/pokemon/{{pokemonDetail.id}}.png" width="30%" alt="">
     </div>
-    <div class="t-w col-sm-6 offset-sm-3 pb-5">        
-        <h5>A Bulbasaur es fácil verle echándose una siesta al sol. La semilla que tiene en el lomo va creciendo cada vez más a medida que absorbe los rayos del sol.</h5>
-        <p class="p-p"><strong>Altura:</strong> 0,7 m.</p>  
-        <p class="p-p"><strong>Peso:</strong> 6,9 kg.</p>
-        <p class="p-p"><strong>Sexo:</strong> masculino/femenino.</p>
-        <p class="p-p"><strong>Categoría:</strong> semilla.</p>
-        <p class="p-p"><strong>Habilidad:</strong> espesura (potencia los ataques de tipo ‘planta’ en un apuro).</p>
-        <p class="p-p"><strong>Tipo:</strong> planta y veneno.</p>
-        <p class="p-p"><strong>Debilidad:</strong> fuego, volador, hielo y psíquico.</p>
+    <div class="t-w col-sm-6 offset-sm-3 pb-5">
+        <p class="p-p"><strong>Altura:</strong> {{pokemonDetail.height}} decimetros</p>  
+        <p class="p-p mt-3"><strong>Peso:</strong> {{pokemonDetail.weight}} hectogramos</p>
+        <p class="p-p mt-3"><strong>Experiencia básica:</strong> {{pokemonDetail.base_experience}}</p>
+        <p class="p-p mt-3"><strong>Índices de juego:</strong> <span *ngFor="let indice of indices; index as i"> {{indice.version.name}} |</span></p>
+        <p class="p-p mt-3"><strong>Habilidades:</strong> <span *ngFor="let ability of abilities; index as i"> {{ability.ability.name}} </span></p>
+        <p class="p-p mt-3"><strong>Movimientos:</strong> <span *ngFor="let move of moves; index as i"> {{move.move.name}} |</span></p>
+        <p class="p-p mt-3"><strong>Estadisticas:</strong> <span *ngFor="let stat of stats; index as i"> {{stat.stat.name}} - {{stat.base_stat}} |</span></p> 
         
     </div>
 </div>
